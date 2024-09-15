@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MyFood</string>
+    <string name="restaurants">Restaurantes</string>
+    <string name="marketplaces">Mercados</string>
+    <string name="drinks">Bebidas</string>
+    <string name="dotted">&#8226;</string>
+    <string name="famous">Famosos no iFood</string>
+    <string name="see_more">Ver mais</string>   <!-- pontinhos abaixo dos banners-->
+    <string name="shop_category">\u2022 %1$s \u2022 %2$.1f km</string>
+    <string name="shop_price">%1$s min \u2022 R$ %2$.2f</string> <!-- colocar string variavel, %1s = %posiçaoString -->
+    <string name="shops">Lojas</string>
+    <string name="products">Produtos</string>
+    <string name="explore_more">Explore mais com a conta do iFood</string>
+    <string name="enter">Entrar ou cadastrar-se</string>
+    <string name="home_menu">Início</string>
+    <string name="search_menu">Busca</string>
+    <string name="orders_menu">Pedidos</string>
+    <string name="profile_menu">Perfil</string>
+
+    <string-array name="spiner_categorias">
+        <item>Categoria</item>
+        <item>Italiana</item>
+        <item>Japonesa</item>
+        <item>Brasileira</item>
+    </string-array>
+
+    <string name="progress_button_hide">Acessar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ProductFragment">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/product_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_shop_product"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@+id/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/rounded_shop"
+        app:strokeColor="@color/lt_gray"
+        app:strokeWidth="3dp"
+        android:layout_marginTop="-40dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/img_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/lt_gray"
+        app:strokeWidth="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="20dp">
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/title_subtitle"
+        tools:text="Teste de loja" />
+
+    <TextView
+        android:id="@+id/title_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_title"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        tools:text=" Pizza \u2022 11,2 km" />
+
+            <include
+                android:id="@+id/view"
+                layout="@layout/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/title_star"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_subtitle" />
+
+    <TextView
+        android:id="@+id/title_star"
+        android:layout_width="44dp"
+        android:layout_height="19dp"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/ic_baseline_star_18"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:text="4,4" />
+
+    <include
+        android:id="@+id/view2"
+        layout="@layout/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/title_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_star" />
+
+            <TextView
+                android:id="@+id/title_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:text="60-70 min \u2022 R$22,00" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/text_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/products"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rv_products"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_products"
+        android:layout_width="match_parent"
+        android:layout_height="590dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_products" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
